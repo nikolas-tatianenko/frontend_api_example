@@ -1,0 +1,49 @@
+# Access to this path is not restricted. This is notated as _access: 'TRUE'.
+frontend_api_example_description:
+  path: 'school/frontend_api_example'
+  defaults:
+    _controller: '\Drupal\frontend_api_example\Controller\FrontendApiExamplePageController::description'
+    _title: 'Page Example'
+  requirements:
+    _permission: 'access content'
+
+
+frontend_api_example_simple:
+  path: 'school/frontend_api_example/simple'
+  defaults:
+    _controller: '\Drupal\frontend_api_example\Controller\FrontendApiExamplePageController::simple'
+    _title: 'Simple - no arguments'
+  requirements:
+    _permission: 'access simple page'
+
+frontend_api_example_arguments:
+  path: 'school/frontend_api_example/arguments/{first}/{second}'
+  defaults:
+    _controller: '\Drupal\frontend_api_example\Controller\FrontendApiExamplePageController::arguments'
+  requirements:
+    _permission: 'access arguments page'
+
+
+# Reponse example
+frontend_api_example.response:
+  path: '/school/frontend_api_example/response'
+  defaults:
+    _controller: '\Drupal\frontend_api_example\Controller\FrontendApiExamplePageController::checkResponse'
+  requirements:
+   _permission: 'access content'
+
+# Will return Json response.
+frontend_api_example.response_json:
+  path: '/school/frontend_api_example/response/json'
+  defaults:
+    _controller: '\Drupal\frontend_api_example\Controller\FrontendApiExamplePageController::responseJson'
+  requirements:
+   _permission: 'access content'
+
+# Will redirect to different page.
+frontend_api_example.response_redirect:
+  path: '/school/frontend_api_example/response/redirect'
+  defaults:
+    _controller: '\Drupal\frontend_api_example\Controller\FrontendApiExamplePageController::responseRedirect'
+  requirements:
+   _permission: 'access content'
