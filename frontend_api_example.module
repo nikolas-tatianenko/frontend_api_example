@@ -3,3 +3,15 @@
  * @file
  * Main file.
  */
+
+/**
+ * Implements hook_theme().
+ */
+function frontend_api_example_theme() {
+  return array(
+    'frontend_api_example_block' => array(
+      'template' => 'frontend_api_example_block',
+      'variables' => array('title' => NULL, 'body' => NULL),
+    ),
+  );
+}
