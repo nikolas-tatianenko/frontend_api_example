@@ -1,0 +1,9 @@
+frontend_api_example.main:
+  version: 1.x
+  js:
+    js/main.js: {}
+  # Add jQuery and settings dependencies.
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
