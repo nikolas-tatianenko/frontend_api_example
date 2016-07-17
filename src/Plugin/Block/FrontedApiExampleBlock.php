@@ -28,11 +28,7 @@ class FrontedApiExampleBlock extends BlockBase {
       '#title' => 'title text',
       '#body' => 'Body text',
     );
-    $build['myelement'] = array(
-      '#type' => 'frontend_api_example_block',
-      '#title' => 'title text',
-      '#body' => 'Body text',
-    );
+    
     $build['myelement']['#attached']['library'][] = 'frontend_api_example/frontend_api_example.main';
     $build['myelement']['#attached']['drupalSettings']['frontend_api_example']['name'] = 'Drupal School User';
     return $build;
